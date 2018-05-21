@@ -30,7 +30,6 @@
     @include('layouts.partials.loader')
     <div class="overlay"></div>
     @include('layouts.partials.header')
-    @include('layouts.partials.sidebar')
 
     <section class="content">
         @yield('content')
