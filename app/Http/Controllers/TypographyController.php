@@ -25,4 +25,16 @@ class TypographyController extends Controller
     {
         return view('layouts.typography.index');
     }
+
+
+    public function contract()
+    {
+
+        return redirect('/');
+
+    }
+
+
+
+
 }
