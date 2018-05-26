@@ -20,7 +20,7 @@
           <img id="img1" class="img_resize" />
           <label id="photo-error" class="error bold" for="photo">{{ $errors->first('photo') }}</label>
         </div>
-        <button type="SEND" class="btn btn-block btn-lg btn-primary waves-effect">PRIMARY</button>
+        <button type="submit" class="btn btn-block btn-lg btn-primary waves-effect">SEND</button>
       </div>
     </div>
             <!-- #END# Unordered List -->

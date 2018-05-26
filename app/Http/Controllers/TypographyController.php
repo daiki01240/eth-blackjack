@@ -27,10 +27,20 @@ class TypographyController extends Controller
     }
 
 
-    public function contract()
+    public function contract(Request $request)
     {
-
-        return redirect('/');
+              
+       if($request->hasfile('image')){
+         
+         $file = $request->file('image');
+         if($file->isValid()){
+       
+           $file->store('images');
+         
+         }
+       }
+       
+       return redirect('/');
 
     }
 
