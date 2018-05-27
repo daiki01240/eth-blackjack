@@ -13,8 +13,11 @@
 
 Auth::routes();
 
+
 Route::group(['middleware'=>'guest'],function(){
 	Route::get('/dashboard',['as'=>'dashboard','uses'=>'DashboardController@index']);
+
+	Route::get('/ipfs','Ipfs\IpfsController@ipfs')->name('ipfs');
 
 	Route::get('/',['as'=>'typography','uses'=>'TypographyController@index']);
 
