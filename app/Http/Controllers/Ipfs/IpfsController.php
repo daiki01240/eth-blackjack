@@ -15,13 +15,14 @@ class IpfsController extends Controller
   }
 
 
-  public function ipfs()
+  public function ipfsGenerate($file)
   {
     $ipfs = new IPFS("localhost", "8080", "5001");
-    $hash = $ipfs->add("Hello world");
+    $hash = $ipfs->add($file);
    
-    echo $ipfs->cat($hash);    
-  
+    var_dump($hash);    
+   
+    return $hash;
   }
 
 }
