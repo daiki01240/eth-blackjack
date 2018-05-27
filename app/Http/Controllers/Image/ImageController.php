@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Ipfs\IpfsController;
+use Config;
+use App\Libs\Eth\Ethereum;
 class ImageController extends Controller
 {
   public function __construct()
@@ -36,6 +38,11 @@ class ImageController extends Controller
       }
       //return redirect('/');
   }
+  public function ethereum()
+  {
+    $eth = new Ethereum(Config::get('eth.node_host'),Config::get('eth.node_port'));
 
+    dd($eth->eth_accounts());
+  }
     
 }

@@ -17,9 +17,10 @@ Auth::routes();
 Route::group(['middleware'=>'guest'],function(){
 	Route::get('/ipfs','Ipfs\IpfsController@ipfsGenerate')->name('ipfs.generate');
 	Route::get('/','Image\ImageController@index')->name('image');
-
 	Route::post('/','Image\ImageController@index')->name('image');
-
 	Route::post('/contract','Image\ImageController@contract')->name('contract');
+
+	Route::get('/ethereum','Image\ImageController@ethereum')->name('ethereum');
+
 
 });
