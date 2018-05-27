@@ -20,8 +20,7 @@ class IpfsController extends Controller
     $ipfs = new IPFS("localhost", "8080", "5001");
     $hash = $ipfs->add("Hello world");
    
-    var_dump($ipfs->cat($hash));
-    
+    echo $ipfs->cat($hash);    
   
   }
 

@@ -18,10 +18,14 @@ Route::group(['middleware'=>'guest'],function(){
 	Route::get('/dashboard',['as'=>'dashboard','uses'=>'DashboardController@index']);
 
 	Route::get('/ipfs','Ipfs\IpfsController@ipfs')->name('ipfs');
+	Route::get('/','Image\ImageController@index')->name('image');
+	Route::post('/contract','Image\ImageController@contract')->name('contract');
+
+
+
 
 	Route::get('/',['as'=>'typography','uses'=>'TypographyController@index']);
 
-	Route::post('/contract','TypographyController@contract')->name('contract');
 
 	Route::get('/helper',['as'=>'helper','uses'=>'HelperController@index']);
 	Route::get('/widget',['as'=>'widget','uses'=>'WidgetController@index']);
